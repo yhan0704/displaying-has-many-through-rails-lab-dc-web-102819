@@ -12,11 +12,5 @@ require 'rails_helper'
 # end
 RSpec.describe DoctorsHelper, type: :helper do
 
-  describe "#show page" do
-    it "shows all of a doctor" do
-      visit doctors_path
-      expect(page).to have_content("Leonard 'Bones' McCoy")
-    end
-
 end
 
