@@ -1,0 +1,13 @@
+<%= form_for @doctor do |d| %>
+<%= d.label :name %>
+<%= d.text_field :name %><br><br>
+<%= d.label :department %>
+<%= d.text_field :department %><br><br>
+    <%= d.fields_for :appointments do |app| %>
+    <%= app.label :appointment_datetime %>
+    <%= app.datetime_select :appointment_datetime %><br><br>
+    <%= app.label :patient %>
+    <%= app.text_field :patient %><br><br>
+    <% end %>
+<%= d.submit "Create Doctor" %>
+<% end %>
